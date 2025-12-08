@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-italianno: 'Italianno', cursive;
+}
+
+
+@theme {
+  --font-gwendolyn: "Gwendolyn", cursive;
+}
+
+.slick-dots {
+  bottom: 52px !important;
+  display: flex !important;
+  gap: 4px !important;
+  justify-content: center !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;   /* change dot color */
+  font-size: 12px !important;
+  opacity: .5 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;     /* active dot color */
+  opacity: 1 !important;
+}
+
