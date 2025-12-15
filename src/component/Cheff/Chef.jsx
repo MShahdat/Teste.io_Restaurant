@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn, defaultViewport, staggerContainer } from '../../motion/Motion';
+import { MediaQuery } from '../hook/MediaQuery';
 
 const chef = [
     {
@@ -35,26 +36,7 @@ const chef = [
 
 
 const Chef = () => {
-    const useMediaQuery = (query) => {
-        const [matches, setMatches] = useState(() => {
-            if (typeof window === 'undefined') return false;
-            return window.matchMedia(query).matches;
-        });
-
-        useEffect(() => {
-            const media = window.matchMedia(query);
-            if (media.matches !== matches) setMatches(media.matches);
-
-            const listener = () => setMatches(media.matches);
-            media.addEventListener("change", listener);
-
-            return () => media.removeEventListener("change", listener);
-        }, [query]);
-
-        return matches;
-    };
-
-    const isSmallScreen = useMediaQuery("(max-width: 640px)");
+    const isMobile = MediaQuery("(max-width: 768px)");
 
     return (
         <div className=' '>
@@ -77,9 +59,7 @@ const Chef = () => {
                         chef.map((ch, idx) => (
                             <motion.div
                                 key={idx}
-                                // variants={staggerContainer(0.2, 0.1)}
-                                // variants={fadeIn('up', ((idx + 1) * 0.2) % 3)}
-                                variants={fadeIn("up", isSmallScreen ? 0.2 : ((idx + 1) * 0.2) % 3)}
+                                variants={fadeIn("up", isMobile ? .2 : ((idx + 1) * 0.2) % 3)}
                                 initial="hidden"
                                 whileInView={'show'}
                                 viewport={defaultViewport}

@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 import { fadeIn, defaultViewport } from '../motion/Motion';
+import { MediaQuery } from './hook/MediaQuery';
+
+
 const reserve = [
   {
     date: "1 April, 2025",
-    menu: ["Fries burgerasdfasdf", "Coke"],
+    menu: ["Fries burgeraf", "Coke"],
     price: 18,
     status: "Delivered"
   },
@@ -34,11 +37,14 @@ const Profile = () => {
   const user = JSON.parse(localStorage.getItem('teste_user'))
   console.log(user)
 
+  const isMobile = MediaQuery('(max-width: 640px)');
+
+
   return (
-    <div className='flex flex-col md:flex-row max-w-7xl px-4 mx-auto'>
+    <div className='flex flex-col md:flex-row max-w-7xl mx-auto'>
       <motion.div
-        variants={fadeIn('right', 0.6)}
-        initial={'hidden'}
+        variants={isMobile ? fadeIn('up', 0.2): fadeIn('right', 0.4)}
+        initial = {'hidden'}
         whileInView={'show'}
         viewport={defaultViewport}
         className='text-black w-full md:w-1/2 lg:w-2/5 bg-white shadow-2xl py-8'>
@@ -48,8 +54,8 @@ const Profile = () => {
         </div>
 
         {/* <h3 className='border-t border w-2/3 mt-2 mx-auto border-black/30'></h3> */}
-        <div className=" px-4 sm:px-8 md:px-2">
-          <table className="mt-4 lg:mt-6 w-full border-t border-b border-black/50">
+        <div className="sm:px-8 md:px-2 overflow-hidden">
+          <table className="mt-4 lg:mt-6 border-t w-full border-b border-black/50">
             <tbody>
               <tr className="border-b border-black/50">
                 <td className="px-4 text-[16px] py-2 font-medium">Email</td>
@@ -75,9 +81,10 @@ const Profile = () => {
 
         </div>
       </motion.div>
+
       <motion.div
-      variants={fadeIn('left', 0.6)}
-        initial={'hidden'}
+      variants={isMobile ? fadeIn('up', 0.2) : fadeIn('left', 0.4)}
+        initial = {'hidden'}
         whileInView={'show'}
         viewport={defaultViewport}
       className='w-full md:w-1/2 lg:w-3/5 bg-red-500 text-white'>

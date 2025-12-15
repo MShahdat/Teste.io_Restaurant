@@ -3,6 +3,7 @@ import { IoMdTime } from "react-icons/io";
 import { motion } from 'framer-motion'
 import { fadeIn, defaultViewport } from '../../motion/Motion';
 import { dataContext } from '../../context/Context';
+import { MediaQuery } from '../hook/MediaQuery';
 
 const Ab = () => {
 
@@ -42,12 +43,13 @@ const Ab = () => {
         setTimeSlots(generateTimeSlots());
     }, []);
 
+    const isMobile = MediaQuery("(max-width:639px)")
 
     return (
         <div className='overflow-auto md:overflow-hidden'>
             <div className='max-w-7xl mx-auto flex flex-col sm:flex-row gap-0 sm:gap-0 h-[580px]'>
                 <motion.div
-                    variants={fadeIn('right', 0.3)}
+                    variants={isMobile ? fadeIn('up', 0.2) : fadeIn('right', 0.3)}
                     initial={'hidden'}
                     whileInView={'show'}
                     viewport={true}

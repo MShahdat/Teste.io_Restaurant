@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { ToastContainer, Zoom, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer, defaultViewport } from '../../motion/Motion';
 import { dataContext } from '../../context/Context';
+import { MediaQuery } from '../hook/MediaQuery';
+
 
 const Conta = () => {
   const [open, setOpen, , setSignInOpen, , setSignUpOpen] = useContext(dataContext)
@@ -30,6 +32,8 @@ const Conta = () => {
 
   }
 
+  const isMobile = MediaQuery("(max-width: 768px)");
+
   return (
     <div className='max-w-7xl px-4 py-8 mx-auto'>
       <div className=''>
@@ -47,7 +51,7 @@ const Conta = () => {
           className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-white'>
 
           <div className='h-40 flex px-4 items-center justify-center w-full rounded bg-red-500'>
-            <p className='text-xl'>Address: <span className='text-lg'>198 West 21th Street, Narayanganj, Dhaka-Bangladesh</span></p>
+            <p className='text-xl text-center'>Address: <span className='text-lg'>198 West 21th Street, Narayanganj, Dhaka-Bangladesh</span></p>
           </div>
 
           <div className='h-40 flex px-4 items-center justify-center w-full rounded bg-red-500'>
@@ -65,7 +69,7 @@ const Conta = () => {
         </motion.div>
         <div className='mt-12 grid grid-cols-1 md:grid-cols-2 gap-4'>
           <motion.div
-          variants={fadeIn('right', 0.4)}
+          variants={isMobile ? fadeIn('up', 0.4) : fadeIn('right', 0.4)}
           initial="hidden"
           whileInView={'show'}
           viewport={defaultViewport}
@@ -82,7 +86,7 @@ const Conta = () => {
           </motion.div>
 
           <motion.div
-          variants={fadeIn('left', 0.4)}
+          variants={isMobile ? fadeIn('up', 0.4) : fadeIn('left', 0.4)}
           initial="hidden"
           whileInView={'show'}
           viewport={defaultViewport}
@@ -110,20 +114,6 @@ const Conta = () => {
               )
             }
             </form>
-
-            <ToastContainer
-              position="top-center"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick={false}
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="light"
-              transition={Zoom}
-            />
           </motion.div>
         </div>
 

@@ -43,22 +43,22 @@ const Footer = () => {
                     <h1 className='mt-4 text-xl uppercase text-white font-bold tracking-widest'>Open Hours</h1>
                     <div className="mt-4 lg:mt-8 grid grid-cols-2 gap-y-1.5 w-[328px] md:w-[300px]">
                         <p className="text-white/95">Monday</p>
-                        <p className="text-white/70">10:00 AM - 12:00 AM</p>
+                        <p className="text-white/70">10:00 AM - 11:00 PM</p>
 
                         <p className="text-white/95">Tuesday</p>
-                        <p className="text-white/70">10:00 AM - 12:00 AM</p>
+                        <p className="text-white/70">10:00 AM - 11:00 PM</p>
 
                         <p className="text-white/95">Wednesday</p>
-                        <p className="text-white/70">10:00 AM - 12:00 AM</p>
+                        <p className="text-white/70">10:00 AM - 11:00 PM</p>
 
                         <p className="text-white/95">Thursday</p>
-                        <p className="text-white/70">10:00 AM - 12:00 AM</p>
+                        <p className="text-white/70">10:00 AM - 11:00 PM</p>
 
                         <p className="text-white/95">Friday</p>
-                        <p className="text-white/70">10:00 AM - 12:00 AM</p>
+                        <p className="text-white/70">10:00 AM - 11:00 PM</p>
 
                         <p className="text-white/95">Saturday</p>
-                        <p className="text-white/70">10:00 AM - 12:00 AM</p>
+                        <p className="text-white/70">10:00 AM - 11:00 PM</p>
 
                         <p className="text-white/95">Sunday</p>
                         <p className="text-red-700 font-medium">Closed</p>
