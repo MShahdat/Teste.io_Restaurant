@@ -17,20 +17,20 @@ const MenuCard = (props) => {
         <div>
             <div className='bg-white/75 rounded h-fit relative transform hover:border hover:border-dashed hover:border-red-400 duration-300 border border-dashed border-red-100'>
                 <motion.div
-                variants={fadeIn('up', 0.3)}
-                                initial = {'hidden'}
-                                whileInView={'show'}
-                                viewport={defaultViewport}
+                    variants={fadeIn('up', 0.3)}
+                    initial={'hidden'}
+                    whileInView={'show'}
+                    viewport={defaultViewport}
                 >
                     <h3 className='text-center text-2xl py-4 font-semibold tracking-widest text-black/80 pb-4 uppercase'>{cat}</h3>
-                <div>
-                    <div className='absolute left-2 top-2'>
-                        <GiHamburger className='size-12 text-black/20' />
+                    <div>
+                        <div className='absolute left-2 top-2'>
+                            <GiHamburger className='size-12 text-black/20' />
+                        </div>
+                        <div className='absolute right-2 top-2'>
+                            <GiSlicedBread className='size-12 text-black/20' />
+                        </div>
                     </div>
-                    <div className='absolute right-2 top-2'>
-                        <GiSlicedBread className='size-12 text-black/20' />
-                    </div>
-                </div>
                 </motion.div>
 
 
@@ -42,15 +42,15 @@ const MenuCard = (props) => {
                     <GiFullPizza className='size-10 text-black/20'/>
                 </div> */}
                 <div
-                className='flex flex-col gap-0'>
+                    className='flex flex-col gap-0'>
                     {
                         props.menu.map((item, idx) => (
                             <motion.div
-                            variants={fadeIn('up', 0.2)}
-                                            initial = {'hidden'}
-                                            whileInView={'show'}
-                                            viewport={defaultViewport}
-                            key={idx}>
+                                variants={fadeIn('up', 0.2)}
+                                initial={'hidden'}
+                                whileInView={'show'}
+                                viewport={{once: false}}
+                                key={idx}>
                                 <div className='py-6 flex justify-between items-center px-2 sm:px-6 md:px-4 hover:border-b hover:border-red-400 hover:border-dashed border-b border-red-100 duration-300 border-dashed'>
                                     <div className='flex gap-4 items-center'>
                                         <img src={item.url} className='w-20 sm:w-24 h-20 sm:h-24 object-cover rounded-full'></img>

@@ -62,7 +62,7 @@ const Chef = () => {
                                 variants={fadeIn("up", isMobile ? .2 : ((idx + 1) * 0.2) % 3)}
                                 initial="hidden"
                                 whileInView={'show'}
-                                viewport={defaultViewport}
+                                viewport={{once: false}}
                                 className='bg-white shadow-2xl h-128 hover:scale-102 duration-500 transform'
                             >
                                 <div className='overflow-hidden'>

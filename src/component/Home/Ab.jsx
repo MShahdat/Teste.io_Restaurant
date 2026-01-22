@@ -156,7 +156,7 @@ const Ab = () => {
                             variants={fadeIn('up', 0.4)}
                             initial={'hidden'}
                             whileInView={'show'}
-                            viewport={defaultViewport}
+                            viewport={{once: false}}
                             className='sm:mt-2 lg:mt-8 md:leading-relaxed lg:tracking-wide rounded text-gray-500 px-4 sm:px-2 py-2 lg:py-4 md:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempora, dolores voluptate hic iure molestiae deserunt a ratione nihil distinctio officia rerum. Nam possimus fugiat, necessitatibus ducimus reprehenderit natus ad totam qui, omnis libero eaque optio perspiciatis, debitis ullam quisquam aut exercitationem quibusdam ipsam consequatur explicabo architecto aspernatur soluta maxime. Ex cumque delectus repellat impedit enim quaerat earum voluptatum vitae? Officia delectus enim, nam soluta placeat asperiores ad deserunt explicabo.</motion.p>
                     </div>
                 </div>

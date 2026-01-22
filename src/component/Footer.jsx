@@ -24,21 +24,21 @@ const Footer = () => {
                     variants={fadeIn('up', 0.2)}
                     initial="hidden"
                     whileInView={'show'}
-                    viewport={defaultViewport}
+                    viewport={{once: false}}
                 >
                     <h3 className='mt-4 text-xl uppercase text-white font-bold tracking-widest'>Teste</h3>
                     <p className='mt-4 lg:mt-8 text-[16px] leading-relaxed text-white/70 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque earum aperiam labore alias, expedita laborum eum ipsa, sit, ad provident deserunt quos ut!</p>
                     <div className='flex gap-2 mt-4'>
-                        <a href='https://x.com/'><FaTwitter className='size-8 rounded-full bg-red-500 px-1.5 py-1.5' /></a>
-                        <a href='https://www.facebook.com/'><FaFacebook className='size-8 rounded-full bg-red-500 px-1.5 py-1.5' /></a>
-                        <a href='https://www.instagram.com/'><LuInstagram className='size-8 rounded-full bg-red-500 px-1.5 py-1.5' /></a>
+                        <a href='https://x.com/'><FaTwitter className='size-8 rounded-full bg-red-600 px-1.5 py-1.5' /></a>
+                        <a href='https://www.facebook.com/'><FaFacebook className='size-8 rounded-full bg-red-600 px-1.5 py-1.5' /></a>
+                        <a href='https://www.instagram.com/'><LuInstagram className='size-8 rounded-full bg-red-600 px-1.5 py-1.5' /></a>
                     </div>
                 </motion.div>
                 <motion.div
                     variants={fadeIn('up', 0.4)}
                     initial="hidden"
                     whileInView={'show'}
-                    viewport={defaultViewport}
+                    viewport={{once: false}}
                 >
                     <h1 className='mt-4 text-xl uppercase text-white font-bold tracking-widest'>Open Hours</h1>
                     <div className="mt-4 lg:mt-8 grid grid-cols-2 gap-y-1.5 w-[328px] md:w-[300px]">
@@ -70,7 +70,7 @@ const Footer = () => {
                     variants={fadeIn('up', 0.6)}
                     initial="hidden"
                     whileInView={'show'}
-                    viewport={defaultViewport}
+                    viewport={{once: false}}
                 >
                     <h2 className='mt-4 text-xl uppercase text-white font-bold tracking-widest'>Instagram</h2>
                     <div className='mt-4 lg:mt-8 grid grid-cols-3'>
@@ -86,13 +86,13 @@ const Footer = () => {
                     variants={fadeIn('up', 0.8)}
                     initial="hidden"
                     whileInView={'show'}
-                    viewport={defaultViewport}
+                    viewport={{once: false}}
                 >
                     <h2 className='mt-4 text-xl uppercase text-white font-bold tracking-widest'>Newsletter</h2>
                     <p className='mt-4 lg:mt-8 text-white/70 text-[16px] leading-relaxed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, harum?</p>
                     <form onSubmit={handleSubmit} className='mt-4 lg:mt-4 flex flex-col gap-2'>
                         <input onChange={(e) => setEmail(e.target.value)} type='email' value={email} placeholder='Email...' required className='bg-white text-black/70 w-full text-[16px] font-medium px-4 py-2 rounded shadow-2xl outline-none'></input>
-                        <button type='submit' className='bg-red-500 text-center py-1.5 font-bold text-[16px] rounded w-full'>Subscribe</button>
+                        <button type='submit' className='bg-red-600 text-center py-1.5 font-bold text-[16px] rounded w-full'>Subscribe</button>
                     </form>
                 </motion.div>
             </div>
@@ -101,7 +101,7 @@ const Footer = () => {
                       initial="hidden"
                       whileInView={'show'}
                       viewport={defaultViewport}
-            className='py-4 text-white/80 bg-red-500 text-center'>
+            className='py-4 text-white bg-red-600 text-center'>
                 Copyright ©2025 All rights reserved. This template is made by Shahdat
             </motion.div>
         </div>

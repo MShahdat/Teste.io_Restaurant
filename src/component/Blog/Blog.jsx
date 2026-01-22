@@ -26,7 +26,7 @@ const Blog = (props) => {
                                     variants={fadeIn('up', 0.2)}
                                     initial={'hidden'}
                                     whileInView={'show'}
-                                    viewport={defaultViewport}
+                                    viewport={{once: false}}
                                     key={idx}
                                 >
                                     <Link to={`/blogs/${item.id}`} className='bg-white h-108 relative shadow-2xl flex flex-col gap-2 pb-2 hover:scale-102 duration-500 transform'>

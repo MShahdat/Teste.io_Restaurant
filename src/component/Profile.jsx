@@ -46,7 +46,7 @@ const Profile = () => {
         variants={isMobile ? fadeIn('up', 0.2): fadeIn('right', 0.4)}
         initial = {'hidden'}
         whileInView={'show'}
-        viewport={defaultViewport}
+        viewport={{once: false}}
         className='text-black w-full md:w-1/2 lg:w-2/5 bg-white shadow-2xl py-8'>
         <div className='flex flex-col items-center justify-center'>
           <img src={user?.photo || 'https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3407.jpg?semt=ais_hybrid&w=740&q=80'} className='w-24 h-24 object-cover rounded-full'></img>
@@ -86,7 +86,7 @@ const Profile = () => {
       variants={isMobile ? fadeIn('up', 0.2) : fadeIn('left', 0.4)}
         initial = {'hidden'}
         whileInView={'show'}
-        viewport={defaultViewport}
+        viewport={{once: false}}
       className='w-full md:w-1/2 lg:w-3/5 bg-red-500 text-white'>
         <div className='py-5'>
           <h2 className='text-2xl text-center font-bold tracking-wider mt-0 pb-4'>Reservaion History</h2>

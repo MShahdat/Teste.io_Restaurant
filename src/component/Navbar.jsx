@@ -44,23 +44,23 @@ const Navbar = () => {
     ].filter(Boolean);
 
     //handle logout part
-        const auth = getAuth(app);
-        const logOut = () => {
-            console.log('log out clicked')
-            signOut(auth).then(() => {
+    const auth = getAuth(app);
+    const logOut = () => {
+        console.log('log out clicked')
+        signOut(auth).then(() => {
 
-                localStorage.removeItem('teste_user')
-                setToken(null)
-                toast.success('Sign out successfully!')
-                navigate('/')
-                setOpen(!open)
-                window.dispatchEvent(new Event('storage'))
-            }).catch((err) => {
-                console.log(err)
-            });
-        }
+            localStorage.removeItem('teste_user')
+            setToken(null)
+            toast.success('Sign out successfully!')
+            navigate('/')
+            setOpen(!open)
+            window.dispatchEvent(new Event('storage'))
+        }).catch((err) => {
+            console.log(err)
+        });
+    }
 
-        useEffect(() => {
+    useEffect(() => {
         const syncToken = () => {
             setToken(localStorage.getItem('teste_user'))
         }
@@ -104,7 +104,7 @@ const Navbar = () => {
                         {
                             token &&
                             <Link to={'/profile'}>
-                            <img src={JSON.parse(token).photo} className=' h-8 w-8 object-cover rounded-full'></img>
+                                <img src={JSON.parse(token).photo} className=' h-8 w-8 object-cover rounded-full'></img>
                             </Link>
                         }
                         {
@@ -153,7 +153,7 @@ const Navbar = () => {
                         !token ? (
                             <div onClick={() => {
                                 setOpen(!open),
-                                setSignInOpen(true)
+                                    setSignInOpen(true)
                             }} className='text-center text-lg py-1.5 bg-white text-black font-semibold rounded w-full'>
                                 <button>Sign in</button>
                             </div>

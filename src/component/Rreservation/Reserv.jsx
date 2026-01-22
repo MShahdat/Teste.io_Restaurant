@@ -58,7 +58,7 @@ const Reserv = () => {
             variants={fadeIn('up', 0.4)}
             initial={'hidden'}
             whileInView={'show'}
-            viewport={defaultViewport}
+            viewport={{once: false}}
             className='px-4 lg:px-6 xl:px-12 pb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
             <input
               className='border rounded-lg px-4 py-2.5 border-white w-full outline-none font-medium text-lg tracking-[1px] placeholder:text-gray-300'
